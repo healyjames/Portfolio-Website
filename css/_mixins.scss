@@ -1,0 +1,26 @@
+/* Mixins */
+@mixin grid($cols, $gap) {
+
+    display: grid;
+    justify-content: center;
+    grid-template-columns: $cols;
+    grid-gap: $gap;
+
+}
+
+@mixin flex($justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin transition($target, $time, $effect) {
+    -webkit-transition: $target $time $effect;
+    -moz-transition: $target $time $effect;
+    -o-transition: $target $time $effect;
+    transition: $target $time $effect;
+}
+
+@mixin shadow($spread, $transparency) {
+    box-shadow: 0px 20px 23px $spread rgba(0,0,0,$transparency);
+}
